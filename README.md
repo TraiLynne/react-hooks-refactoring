@@ -1,6 +1,4 @@
-# react-hooks-refactoring
-
-Advanced React – Refactoring to Functional Components with Hooks
+# Advanced React – Refactoring to Functional Components with Hooks
 
 **Plan**: Refactor class components to functional components using Hooks.
 
