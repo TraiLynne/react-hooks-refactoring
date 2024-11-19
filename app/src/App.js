@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navigation from "./components/layout/Nav";
+import Before from "./components/layout/Before";
+import Refactored from "./components/layout/Refactored";
+import { examples } from "./components/examples";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./App.css";
+
+const App = () => {
+	const [activeExample, setActiveExample] = useState(0);
+
+	return (
+		<div className="app">
+			<Navigation examples={examples} setActiveExample={setActiveExample} />
+			<Before
+				component={examples[activeExample].before.component}
+				code={examples[activeExample].before.code}
+			/>
+			<Refactored
+				component={examples[activeExample].refactored.component}
+				code={examples[activeExample].refactored.code}
+			/>
+		</div>
+	);
+};
 
 export default App;
