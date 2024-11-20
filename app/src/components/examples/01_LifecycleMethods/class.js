@@ -29,6 +29,7 @@ class LifecycleClassComponent extends Component {
 	render() {
 		return (
 			<div>
+				<p>Check out the Console. 👀</p>
 				<p>Count: {this.state.count}</p>
 				<button onClick={this.incrementCount}>Increment</button>
 			</div>

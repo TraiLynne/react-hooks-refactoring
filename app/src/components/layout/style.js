@@ -14,30 +14,45 @@ export const NavButton = styled.button`
 	margin: 0 5px;
 	padding: 10px 20px;
 	cursor: pointer;
-	width: 94%;
+	width: 15vw;
+	height: 5vw;
 `;
 
-export const BeforeContainer = styled.div`
-	width: 40vw;
-	border: 1px solid red;
-	background-color: red;
-	border-radius: 5px;
-	max-height: 100vh;
+export const DisplayToggleContainer = styled.div`
+	width: 85vw;
+	height: 10%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
 `;
 
-export const RefactoredContainer = styled.div`
-	width: 40vw;
-	border: 1px solid green;
-	background-color: green;
-	border-radius: 5px;
-	max-height: 100vh;
+export const ToggleButton = styled.button`
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	width: 10vw;
+	height: 95%;
+	align-self: center;
 `;
+
+export const DisplayContainer = styled.div`
+	width: 85vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: ${({ isRefactored }) => (isRefactored ? "green" : "red")};
+`;
+
 export const ComponentDisplay = styled.div`
-	height: 45vh;
+	height: 35%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 export const CodeDisplay = styled.div`
-	height: 45vh;
+	height: 35%;
 `;
