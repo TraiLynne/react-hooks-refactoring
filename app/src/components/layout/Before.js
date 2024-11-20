@@ -1,7 +1,7 @@
 import React from "react";
 import { BeforeContainer, CodeDisplay, ComponentDisplay } from "./style";
 import { CodeBlock, dracula } from "react-code-blocks";
-const Before = ({ component: Component, code }) => (
+const Before = ({ component: Component, code, highlights }) => (
 	<BeforeContainer>
 		<h2>Before</h2>
 		<ComponentDisplay>

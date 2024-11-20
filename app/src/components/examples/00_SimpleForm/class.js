@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { CodeBlock, dracula } from "react-code-blocks";
-import { CodeDisplay, ComponentDisplay } from "../../../style";
 
 class SimpleFormClass extends Component {
 	constructor(props) {
@@ -23,25 +21,23 @@ class SimpleFormClass extends Component {
 	render() {
 		return (
 			<>
-				<ComponentDisplay>
-					<form onSubmit={this.handleSubmit}>
-						<input
-							type="text"
-							name="name"
-							value={this.state.name}
-							onChange={this.handleInputChange}
-							placeholder="Name"
-						/>
-						<input
-							type="email"
-							name="email"
-							value={this.state.email}
-							onChange={this.handleInputChange}
-							placeholder="Email"
-						/>
-						<button type="submit">Submit</button>
-					</form>
-				</ComponentDisplay>
+				<form onSubmit={this.handleSubmit}>
+					<input
+						type="text"
+						name="name"
+						value={this.state.name}
+						onChange={this.handleInputChange}
+						placeholder="Name"
+					/>
+					<input
+						type="email"
+						name="email"
+						value={this.state.email}
+						onChange={this.handleInputChange}
+						placeholder="Email"
+					/>
+					<button type="submit">Submit</button>
+				</form>
 			</>
 		);
 	}
