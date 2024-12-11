@@ -8,7 +8,7 @@ class ThemeClassComponent extends Component {
 		const theme = this.context;
 		return (
 			<div style={{ background: theme.background, color: theme.color }}>
-				<p>Current Theme</p>
+				<p>Cuyrrent Theme</p>
 			</div>
 		);
 	}

@@ -34,6 +34,7 @@ const App = () => {
 				/>
 				<h2>{isRefactored ? "Refactored" : "Original"} Version</h2>
 				<ComponentDisplay>
+					<div></div>
 					<activeComponent.component />
 				</ComponentDisplay>
 				<CodeDisplay>

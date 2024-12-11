@@ -53,17 +53,6 @@ export const examples = [
 		},
 	},
 	{
-		title: "Context API",
-		before: {
-			component: ThemeClassComponent,
-			code: beforeCode02,
-		},
-		refactored: {
-			component: ThemeComponent,
-			code: refactoredCode02,
-		},
-	},
-	{
 		title: "State and Methods",
 		before: {
 			component: CounterClassComponent,
