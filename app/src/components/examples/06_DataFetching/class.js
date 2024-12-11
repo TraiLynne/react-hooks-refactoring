@@ -11,7 +11,7 @@ class DataFetcherClass extends Component {
 	}
 
 	componentDidMount() {
-		fetch("<https://jsonplaceholder.typicode.com/posts/1>")
+		fetch("https://jsonplaceholder.typicode.com/posts/1")
 			.then((response) => response.json())
 			.then((data) => this.setState({ data, loading: false }))
 			.catch((error) => this.setState({ error, loading: false }));
