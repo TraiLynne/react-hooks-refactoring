@@ -1,7 +1,43 @@
 export const beforeCode05 = `
-const BeforeComponent = () => <div>Before Component 1</div>;
+class ToggleClassComponent extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isVisible: false,
+		};
+	}
+
+	toggleVisibility = () => {
+		this.setState((prevState) => ({ isVisible: !prevState.isVisible }));
+	};
+
+	render() {
+		return (
+			<div>
+				<button onClick={this.toggleVisibility}>
+					{this.state.isVisible ? "Hide" : "Show"} Content
+				</button>
+				{this.state.isVisible && <p>This is some conditional content.</p>}
+			</div>
+		);
+	}
+}
 `;
 
 export const refactoredCode05 = `
-const RefactoredComponent = () => <div>Refactored Component 1</div>;
+function ToggleComponent() {
+	const [isVisible, setIsVisible] = useState(false);
+
+	let handleToggle = () => {
+		setIsVisible(!isVisible);
+	};
+	return (
+		<div>
+			<button onClick={handleToggle}>
+				{isVisible ? "Hide" : "Show"} Content
+			</button>
+			{isVisible && <p>This is some conditional content.</p>}
+		</div>
+	);
+}
 `;
